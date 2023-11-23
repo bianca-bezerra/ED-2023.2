@@ -38,5 +38,7 @@ int main(){
         printf("%d\n",desempilha(A));
     }
 
+    killp(A);
+    killp(B);
     return 0;
 }

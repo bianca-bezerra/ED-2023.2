@@ -1,5 +1,5 @@
 #include <iostream>
-#include "lista_encadeada.h"
+#include "lista_encadeada.hpp"
 using namespace std;
 
 void substitui(int x, int y, Node *inicio){
@@ -15,11 +15,10 @@ void substitui(int x, int y, Node *inicio){
 }
 
 int main(){
-   Node *inicio = new Node();
-   inicio->valor = 10;
-   inicio->proximo = NULL;
+   Node *inicio = gerarNo(10);
    inicio = insereInicio(inicio,10);
    inicio = insereInicio(inicio,20);
    substitui(10,200,inicio);
    exibe(inicio);
+   kill(inicio);
 }

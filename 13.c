@@ -9,6 +9,7 @@ int main(){
     enfileira(desinfileira(F),F);
     enfileira(desinfileira(F),F);
     printf("%d\n",desinfileira(F));
+    killf(F);
 }
 
 /*

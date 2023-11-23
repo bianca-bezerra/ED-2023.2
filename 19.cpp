@@ -1,5 +1,6 @@
+
 #include <iostream>
-#include "lista_encadeada.h"
+#include "lista_encadeada.hpp"
 using namespace std;
 
 int enesimo(int num,Node * inicio){
@@ -15,12 +16,11 @@ int enesimo(int num,Node * inicio){
 }
 
 int main(){
-   Node *inicio = new Node();
-   inicio->valor = 10;
-   inicio->proximo = NULL;
+   Node * inicio = gerarNo(10);
    inicio = insereInicio(inicio,10);
    inicio = insereInicio(inicio,20);
    inicio = insereInicio(inicio,30);
    cout << enesimo(0,inicio);
+   kill(inicio);
    //exibe(inicio);
 }

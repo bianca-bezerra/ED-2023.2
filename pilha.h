@@ -51,9 +51,9 @@ itemp getTopo(Pilha p){
     return p->item[p->topo];
 }
 
-void killp(Pilha *p){
-    free((*p)->item);
-    free(*p);
-    *p = NULL;
-}
+void killp(Pilha p){
+    free((p)->item);
+    free(p);
+    p = NULL;
+} 
 #endif

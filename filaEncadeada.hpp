@@ -24,8 +24,8 @@ class Fila{
 		No *inicio;
 		No *fim;
 		
-		Fila(){
-			inicio = nullptr;
+		Fila(No *inicio = nullptr){
+			this->inicio = inicio;
 			fim = nullptr;
 		}
 		
@@ -43,7 +43,6 @@ class Fila{
 			if(inicio == nullptr){
 				abort();
 			}
-			
 			char primeiro = inicio->nome;
 			inicio = inicio->prox;
 			return primeiro;
@@ -54,7 +53,24 @@ class Fila{
 		}
 		//   popAll
 	    void clear(){
-	    
+			
+		}
+
+		void empilhaFila(char n){
+			Fila f_aux(nullptr);
+			f_aux.append(n);
+
+			while(!isEmpty()){
+			 	f_aux.append(pop());
+		    }
+
+			while(!f_aux.isEmpty()){
+				append(f_aux.pop());
+			}
+		}
+
+		char desempilhaFila(){
+			return pop();
 		}
 	    	
 };
