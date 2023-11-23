@@ -11,16 +11,16 @@ void ordena(Pilha A, Pilha B){
         if(i==0){// se for o primeiro item, empilha na A
             empilha(valor,A);
         }else{
-            if(valor< getTopo(A)){// caso o valor seja menor que o topo, empilha
+            if(valor< getTopo(A)){// caso o valor seja menor que o topo, empilha na A
                 empilha(valor,A);
             }else{
-                while(!emptyp(A) && getTopo(A) < valor){
-                    empilha(desempilha(A),B);
+                while(!emptyp(A) && getTopo(A) < valor){// caso a pilha nao esteja vazia e o valor novo for maior que o topo
+                    empilha(desempilha(A),B);// tira da pilha A, e coloca na B
                 }
 
                 empilha(valor,A);
                 while (!emptyp(B)) {
-                    empilha(desempilha(B), A);
+                    empilha(desempilha(B), A);//se a pilha tiver vazia, ele coloca o novo item e depois desempilha os itens da B
             }
         }
     }

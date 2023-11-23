@@ -8,7 +8,7 @@ int main(){
     Pilha p  = pilha(200);
 
     printf("Frase: ");
-    gets(frase);
+    scanf("%s",frase);
 
     for(int i = 0;frase[i];i++){
         if(isalpha(frase[i])){
